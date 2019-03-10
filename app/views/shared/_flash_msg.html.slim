@@ -1,0 +1,10 @@
+- flash.each do |klass, msg|
+  - aliass={'error' => 'danger', 'notice' => 'info', 'success' => 'success', 'warning' => 'warning'}
+  .alert.alert-dismissable(class="alert-#{aliass[klass]}")
+    button.close aria-hidden="true" data-dismiss="alert" type="button" 
+      | ×
+    h4 
+      = aliass[klass]
+    strong = "#{klass} : "
+    = msg
+    / a.alert-link href="#"  alert link 

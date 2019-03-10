@@ -1,0 +1,2 @@
+module Members::ResgistrationsHelper
+end
