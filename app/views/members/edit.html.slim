@@ -1,0 +1,19 @@
+.row
+  .col-md-12.mb-5
+    h3.text-center
+      = "#{@member.username}'s profile"
+  .col-md-12
+    = form_for @member, url: member_path, role: 'form' do |f|
+      .form-group
+        = f.label :email
+        = f.email_field :email, required: true, disabled: true, class: 'form-control'
+      .form-group
+        = f.label :username
+        = f.text_field :username, required: true, minlength: 5, class: 'form-control'
+      .form-group
+        = f.label :password
+        = f.password_field :password, minlength: 8, placeholder: 'only if you want to change password',class: 'form-control'
+      .form-group
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, minlength: 8, placeholder: 'only if you want to change password',class: 'form-control'
+      = submit_tag 'Save', class: 'btn btn-primary'

@@ -1,0 +1,16 @@
+.row
+  .col-md-12.mb-5
+    h3.text-center
+      | Sign Up
+  .col-md-12
+    = form_for @member, url: resgistration_index_path, role: 'form' do |f|
+      .form-group
+        = f.label :email
+        = f.email_field :email, required: true, class: 'form-control'
+      .form-group
+        = f.label :password
+        = f.password_field :password, minlength: 8, required: true, class: 'form-control'
+      .form-group
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, minlength: 8, required: true, class: 'form-control'
+      = submit_tag 'Sign Up', class: 'btn btn-primary'
