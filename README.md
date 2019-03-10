@@ -1,24 +1,51 @@
-# README
+## Intro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> this project is made by Wei-Yi, Chiu only for incubit recruitment assessment.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+1. Pull project to `my_dir` then Change directory to `myapp`
 
-* System dependencies
+        $ cd mydir
+2. Install dependencies.
 
-* Configuration
+        $ bundle install
+3. Migrate database
 
-* Database creation
+        $ rails db:migrate
+4. start the web server.
 
-* Database initialization
+        $ cd my_dir && rails s
+4. open browser with [url](http://lvh.me:3000) and have a look.
 
-* How to run the test suite
+## Additional gem I use
+* For development
+  * letter_opener
+  * guard
+  * guard-livereload
+  * rack-livereload, 
+* For front-end
+  * slim-rails
+  * bootstrap
+  * jquery-rails
+* For password encode
+  * bcrypt-ruby
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Testing
+> All testing focus on model / integration test
 
-* ...
+1. At command promt
+
+        $ rails test
+        
+
+## Time Cost
+All task takes me almost `4 hours`. Ideally, I want to finish this in 3 hours, but it takes too much time in ActiveSupport::TestCase, owning to I used to use Rspec
+
+
+here is my acitive deitribution
+* MVC development: `2 hours`
+* test case development: `2 hours`
+
+
