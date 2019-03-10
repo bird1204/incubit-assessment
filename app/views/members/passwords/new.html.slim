@@ -1,0 +1,15 @@
+.row
+  .col-md-12.mb-5
+    h3.text-center
+      = "Recovery your account"
+  .col-md-12
+    = form_for :session, url: password_members_path, role: 'form', method: :PUT do |f|
+      = f.hidden_field :email, value: params[:email]
+      = f.hidden_field :token, value: params[:token]
+      .form-group
+        = f.label :password
+        = f.password_field :password, minlength: 8, required: true, class: 'form-control'
+      .form-group
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, minlength: 8, required: true, class: 'form-control'
+      = submit_tag 'reset', class: 'btn btn-primary'

@@ -1,0 +1,6 @@
+h1 Password#forget
+
+p
+  | Hi, click the link to recovery your password
+p 
+  = link_to 'recovery now.', password_new_members_url(host: 'lvh.me:3000', token: @resource.reset_password_token, email: @resource.email)

@@ -1,0 +1,10 @@
+.row
+  .col-md-12.mb-5
+    h3.text-center
+      = "Do you forgot password ?"
+  .col-md-12
+    = form_for :session, url: password_forget_members_path, role: 'form', method: :GET do |f|
+      .form-group
+        = f.label :email
+        = f.email_field :email, required: true, placeholder: 'input your email', class: 'form-control'
+      = submit_tag 'send me recovery mail', class: 'btn btn-primary'
