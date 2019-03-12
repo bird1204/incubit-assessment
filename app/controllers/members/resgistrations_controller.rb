@@ -10,7 +10,7 @@ class Members::ResgistrationsController < ApplicationController
   private
 
   def resgistration_params
-    params.present? ? params.require(:member).permit(:email, :password, :password_confirmation) : Hash.new
+    params[:member].present? ? params.require(:member).permit(:email, :password, :password_confirmation) : Hash.new
   end
 
   def build_member

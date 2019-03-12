@@ -41,6 +41,8 @@ gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
+gem "config"
+gem "recaptcha"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

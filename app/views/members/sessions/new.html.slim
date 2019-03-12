@@ -10,8 +10,10 @@
       .form-group
         = f.label :password
         = f.password_field :password, min: 8, required: true, class: 'form-control'
+      .form-group
+        = recaptcha_tags
       = submit_tag 'Login', class: 'btn btn-primary'
-      p.right
+      p
         | forgot your password ?
         = link_to ' click here ', password_edit_members_path
         | for recovery.
