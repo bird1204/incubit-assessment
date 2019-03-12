@@ -5,9 +5,6 @@ class MembersController < ApplicationController
     @member.update_attributes!(member_params)
     flash[:success] = "record saved"
     redirect_to edit_member_path(@member.id)
-  rescue ActiveRecord::RecordInvalid => e
-    flash[:error] = "#{e}"
-    redirect_back fallback_location: edit_member_path(@member.id) 
   end
 
   private
@@ -18,5 +15,6 @@ class MembersController < ApplicationController
 
   def find_member
     @member = Member.find(params[:id])
+    raise ActiveRecord::RecordNotFound if @member.blank?
   end
 end

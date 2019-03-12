@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include Error::ErrorHandler
   def authenticate_member!
     return if session[:member_id].present?
     flash[:notice] = '請先登入會員' 
@@ -16,6 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def sign_out resource
+    raise if session[:member_id].nil?
     session[:member_id] = nil
   end
 end

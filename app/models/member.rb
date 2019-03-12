@@ -35,8 +35,7 @@ class Member < ApplicationRecord
   end
 
   def reset_password new_password, token
-    raise ActiveRecord::RecordInvalid if password_reset_expired?
-    raise ActiveRecord::RecordInvalid if not valid_password_reset_token?(token)
+    raise Error::IncorrectTokenError if password_reset_expired? or not valid_password_reset_token?(token)
     update_attributes!(password: new_password)
   end
 
