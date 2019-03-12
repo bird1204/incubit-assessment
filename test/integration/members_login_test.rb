@@ -1,5 +1,8 @@
 require 'test_helper'
 
+# TO-DO
+# test case with recapcha
+
 class MembersLoginTest < ActionDispatch::IntegrationTest
   def setup
     @member = Member.create(email: "mem@example.com", password: 'password')

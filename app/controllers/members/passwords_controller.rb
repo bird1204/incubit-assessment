@@ -18,6 +18,6 @@ class Members::PasswordsController < ApplicationController
 
   def find_member
     @member = Member.find_by(email: params[:session][:email])
-    raise ActiveRecord::RecordNotFound if @member.blank?
+    raise ActiveRecord::RecordNotFound if @member.nil?
   end
 end

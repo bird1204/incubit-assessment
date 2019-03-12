@@ -1,5 +1,8 @@
 require 'test_helper'
 
+# TO-DO
+# test case with recapcha
+
 class PasswordResetsTest < ActionDispatch::IntegrationTest
   def setup
     ActionMailer::Base.deliveries.clear

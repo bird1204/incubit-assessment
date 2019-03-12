@@ -23,13 +23,17 @@
   * letter_opener
   * guard
   * guard-livereload
-  * rack-livereload, 
+  * rack-livereload
+  * awesome_rails_console
+  * config
 * For front-end
   * slim-rails
   * bootstrap
   * jquery-rails
-* For password encode
+* For securing
   * bcrypt-ruby
+  * recaptcha
+
 
 
 ## Testing
@@ -48,4 +52,14 @@ here is my acitive deitribution
 * MVC development: `2 hours`
 * test case development: `2 hours`
 
+
+## Change Log
+* 2019-03-10 
+  * first push
+* 2019-03-12
+  * improve issue
+    * delete unused files
+    * controller refactor due to fat error rescuing
+    * add index for username in members
+    * add google reCapcha at login page / forget password page
 
